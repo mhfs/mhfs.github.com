@@ -1,0 +1,38 @@
+---
+layout: post
+title: "Netbeans Error: Rails requires RubyGems >= 1.3.1"
+tags:
+- rails
+- netbeans
+- jruby
+- gem
+---
+
+I have been working with "Netbeans":http://netbeans.org on a daily basis for a while and every time I load it up I get an annoying "Rails requires RubyGems &gt;= 1.3.1 (you have 1.2.0). Please `gem update --system` and try again." message.
+
+Since I'm using it just as an editor, not making use of its embeded Rails environment, I ignored it for a while but today I decided to face the problem and solve it definitely.
+
+If you already tried to run "gem update --system" in your Netbeans JRuby folder you know it just says there's nothing to update and the errror message persists. After some research on the web I discovered the rubygems-update gem.
+
+To make use of it, just go to your JRuby folder (usually C:\Program Files\Netbeans 6.5.1\ruby2\jruby\bin\jruby) and type the following commands as follows.
+
+First of all check if you find the home of the problem with the following command which should give you "1.2.0" back.
+
+{% highlight bash %}
+mhfs@vm $ jruby gem --version
+{% endhighlight %}
+
+Now type these two commands for the update process to work:
+
+{% highlight bash %}
+mhfs@vm $ jruby gem install rubygems-update
+mhfs@vm $ jruby update_rubygems
+{% endhighlight %}
+
+And check the version again to be sure you got to 1.3.X.
+
+That should be enough. The message will be gone. If any of you have any problem drop a comment and I'll try to help.
+
+Update: There seams to be a way to install a newer version of JRuby by downloading it (http://jruby.codehaus.org/:http://jruby.codehaus.org/) and expanding into your "C:\Program Files\Netbeans 6.5.1\ruby2\" folder. Then all you have to do is adding a new Ruby Platform in your Netbeans project properties. Please notice that a new JRuby install means you'll have to reinstall your gems (if you installed new ones since you first installed Netbeans).
+
+Cheers!

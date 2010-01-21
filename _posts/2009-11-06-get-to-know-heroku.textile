@@ -1,0 +1,21 @@
+---
+layout: post
+title: Get to know Heroku
+tags: 
+- rails
+- hosting
+---
+
+If you're looking for a hosting solution for your Rails app I have a suggestion. Try out "Heroku":http://www.heroku.com/.
+
+It's a git based deploy solution really easy to get running and with a decent free plan for small apps.
+
+Once you start getting more traffic/data you can dynamically scale resources.
+
+My blog is running on a free Heroku plan for a couple of months now and I have no complaints. I have some difficulties when deploying it but their support were great even for the free plan. And it was my fault on the .gems file anyway.
+
+Now that I feel comfortable having tested it with my blog I'll start migrating/deploying some other apps to it.
+
+And keep an eye on the AddOns. They're getting better everyday.
+
+Cheers!

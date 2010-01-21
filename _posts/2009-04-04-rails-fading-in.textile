@@ -1,0 +1,70 @@
+---
+layout: post
+title: Ruby/Rails fading in
+tags:
+- rails
+- framework
+- ruby
+---
+
+So .. as I stated in my previous post <a href="http://rubyonrails.org/" target="_blank">Rails</a> felt into my life some weeks ago.
+
+I started looking into it and a feeling that it rocks started growing into me. In the beginning it was difficulty to put that feeling in words. I was getting surprised by features I already knew from <a href="http://www.symfony-project.org/" target="_blank">Symfony</a>. That was when I figured it out: the first great thing about Rails is Ruby. I'm still far from being a Ruby expert - really far - but I can definitely say that it is a powerful language.
+
+The second thing I couldn't let by is the hability the developers had to make a lot with a few line of codes. I want to give a simple example about it .
+
+Let's grab some posts with category id '1' from the database and pass it to the view.
+
+{% highlight php %}
+//Symfony
+$c = new Criteria();
+$c->add(PostPeer::CATEGORY_ID, 1, Criteria::EQUAL);
+$this->posts = PostPeer::doSelect($c);
+{% endhighlight %}
+
+{% highlight ruby %}
+#Rails
+@posts = Post.find_by_category_id(1);
+{% endhighlight %}
+
+Ok ... I know a lot of you would say I could create a doSelectByCategory() method inside of PostPeer and I respond to that with "but I would have to do it". In a large application that would end up with thousands of avoidable lines of code. Every single feature I code in rails feels shorter and much more readable. End of story.
+
+Another small detail that took my attention was the partial engine. The way it accepts both a single object or a collection (iterating through it by itself) plus a view variable being created with the same name as the partial is great. Again .. nothing special but so awesomely handy.
+
+One more example ... which way of validating the length of a field looks better for you?
+
+{% highlight php %}
+// symfony
+$this->setValidators(array(
+  'message' => new sfValidatorString(array('min_length' => 4))
+));
+{% endhighlight %}
+
+{% highlight ruby %}
+# rails
+validates_length_of       :message,     :minimum => 4
+{% endhighlight %}
+
+Want another one? What's the simpler and clearest way of declaring a relation between two of your models?
+
+{% highlight yaml %}
+# symfony - inside a schema file which gives you no visibility in your model
+business_unit:
+  manager_id: { type: integer, foreignTable: user, foreignReference: id}
+{% endhighlight %}
+
+{% highlight ruby %}
+# rails - inside your model with fully visibility - read and understand
+class BusinessUnit < ActiveRecord::Base
+  belongs_to :user, :foreign_key => 'manager_id'
+{% endhighlight %}
+
+I could continue with that longer and longer ... the routing system is great ... I would definitely fail to describe in words how fantastic the migration system is.
+
+Rails gave me back my pleasure to develop. And when I finish I look to the result and it's beautiful.
+
+I challenge you. Go to <a href="http://guides.rubyonrails.org/index.html" target="_blank">Rails Guides</a>, read something and tell me you don't like it. :D
+
+Cheers!
+
+Next: when I started I felt a little bit confused on the way to go. My next post will provide some links and tips on what I believe to be a good way for a newcomer to approach Rails.

@@ -1,0 +1,40 @@
+---
+layout: post
+title: Comments Count Bug in iNove WP Theme
+tags:
+- wordpress
+- php
+---
+
+p. Well... I was looking into the blog thinking about what would be the next post when I noticed that some unapproved spam comments were being taking into consideration in the iNove theme comments' count.
+
+p. A post was stating "1 comment" but when I clicked on that it took me to the post detail page where there was no comment.
+
+p. After trying a little by myself I ended up asking for help in the #wordpress irc channel on freenode.
+
+p. Thanks to sivel I was able to correct a small bug in functions.php.
+
+On line 363 (3 below)
+{% highlight php %}
+function comment_count( $commentcount ) {
+      global $id;
+      $_commnets = get_comments('post_id=' . $id);
+      $comments_by_type = &separate_comments($_commnets);
+      return count($comments_by_type['comment']);
+}
+{% endhighlight %}
+
+... should actually be ...
+
+{% highlight php %}
+function comment_count( $commentcount ) {
+      global $id;
+      $_commnets = get_comments('status=approve&amp;post_id=' . $id);
+      $comments_by_type = &separate_comments($_commnets);
+      return count($comments_by_type['comment']);
+}
+{% endhighlight %}
+
+Clear your cache (if you have it enabled) and you'll be done.
+
+Cheers!
