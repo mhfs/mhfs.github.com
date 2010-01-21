@@ -47,3 +47,6 @@ ul.contacts li a, ul.contacts li a:visited, ul.contacts li a:hover { font-size: 
 /* footer */
 #footer { border-top: 1px dotted #BBBBBB; padding-top: 5px; margin-top: 40px; text-align: center; color: #777; font-size: 8pt;}
 #footer a { color: #777; }
+
+/* Disqus */
+#disqus_thread { margin-top: 25px; margin-bottom: 25px; }
