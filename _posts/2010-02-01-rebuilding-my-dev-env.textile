@@ -1,0 +1,28 @@
+---
+layout: post
+title: Rebuilding my development environment
+tags: 
+- mac osx
+- development
+- tools
+---
+
+Some time ago I had to compile some libraries for a project I'm working on and that made me realize my machine was all messed up.
+
+It had ruby and mysql manually compiled into /usr/local, imagemagick installed via a package, postgres installed via macports (arghh) and some other stuff that I don't even recall compiled via different install scripts. I was also trapped to a single ruby version.
+
+One may say it's not a big deal but to a control freak like me, that's more of a mess than I can leave with.
+
+I guess my lack of familiarity with a Mac took me to that point and I finally decided to put some effort on rebuilding my environment.
+
+I'm not the step-by-step kind of guy, so I'll just present the tools that I now rely on and made the difference to me.
+
+"Homebrew":http://github.com/mxcl/homebrew is a recipe based package installer that's becoming very popular. It's great and the formula library is growing fast. It beautifully organizes everything into /usr/local and have a great symlinks approach. Very easy to install and uninstall stuff. Some basic dependency resolution is also present. It quickly gave me wget, mysql, postgres and imagemagick. Take a look on the "list of recipes":http://github.com/mxcl/homebrew/tree/master/Library/Formula/.
+
+"RVM":http://rvm.beginrescueend.com/ or Ruby Version Manager is a sweet gem which allows you to have multiple versions of Ruby installed in the same machine and easily switch among them. Gem sets is a cool feature it offers which allows you to jail that app which purpose seems to be using all the gems out there.
+
+One more cool side effect of using Homebrew and RVM is that I no longer need to use sudo all the time.
+
+Hope it works well for other people like it's working for me.
+
+Cheers!
