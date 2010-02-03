@@ -15,23 +15,24 @@ p. After trying a little by myself I ended up asking for help in the #wordpress 
 p. Thanks to sivel I was able to correct a small bug in functions.php.
 
 On line 363 (3 below)
+
 {% highlight php %}
-function comment_count( $commentcount ) {
-      global $id;
-      $_commnets = get_comments('post_id=' . $id);
-      $comments_by_type = &separate_comments($_commnets);
-      return count($comments_by_type['comment']);
+function comment_count($commentcount){
+  global $id;
+  $_commnets = get_comments('post_id=' . $id);
+  $comments_by_type = &separate_comments($_commnets);
+  return count($comments_by_type['comment']);
 }
 {% endhighlight %}
 
 ... should actually be ...
 
 {% highlight php %}
-function comment_count( $commentcount ) {
-      global $id;
-      $_commnets = get_comments('status=approve&amp;post_id=' . $id);
-      $comments_by_type = &separate_comments($_commnets);
-      return count($comments_by_type['comment']);
+function comment_count($commentcount){
+  global $id;
+  $_commnets = get_comments('status=approve&amp;post_id=' . $id);
+  $comments_by_type = &separate_comments($_commnets);
+  return count($comments_by_type['comment']);
 }
 {% endhighlight %}
 
