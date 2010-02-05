@@ -1,0 +1,27 @@
+---
+layout: post
+title: Windows like Home and End keys on the Mac
+tags: 
+- mac osx
+- textmate
+- tutorial
+---
+
+When I bought an "external keyboard":http://store.apple.com/us/product/MB110LL/A?fnode=MTY1NDA1Mg&mco=MTA4Mzc4ODA to use with my macbook, I had 2 expectations. Stop burning my fingers in the freaking hot aluminum (I live in a hot "city":http://maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=campinas,+sp&sll=-22.815614,-47.092891&sspn=0.015408,0.018754&ie=UTF8&hq=&hnear=Campinas+-+SP,+Brazil&ll=-9.449062,-21.972656&spn=111.92208,153.632813&z=3) and have Home/End/Delete keys.
+
+My fingers were fine but the Home/End keys didn't work as I expected. I wanted the same behavior I used to have in Windows, moving the cursor to the begin/end of each line.
+
+After some research I discovered a small trick to achieve that. You can create a file named <code>DefaultKeyBinding.dict</code> under <code>~/Library/KeyBindings/</code> with the following content:
+
+{% highlight bash %}
+  {
+      "\UF729"  = "moveToBeginningOfLine:";
+      "$\UF729" = "moveToBeginningOfLineAndModifySelection:";
+      "\UF72B"  = "moveToEndOfLine:";
+      "$\UF72B" = "moveToEndOfLineAndModifySelection:";
+  }  
+{% endhighlight %}
+
+Restart the application and you should be fine.
+
+Cheers!
