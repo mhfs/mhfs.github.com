@@ -1,0 +1,29 @@
+---
+layout: post
+title: Truly making Rails3 use JQuery
+tags:
+- rails3
+- jquery
+- agnosticism
+---
+
+Being myself a "JQuery":http://jquery.com/ fan, I always make the change from Prototype to JQuery in the rails projects I start.
+
+The addition of the <code>--skip-prototype</code> option to the rails command was certainly a huge progress, but (you'll probably call me a purist) not being able to use <code>javascript_include_tag :defaults</code> with JQuery used to annoy me.
+
+Not anymore. Reading "Rails Inside":http://www.railsinside.com/tips/451-howto-unobtrusive-javascript-with-rails-3.html I figured out there's a way of teaching Rails what your defaults are.
+
+Just create an initializer with the following content:
+
+{% highlight ruby %}
+module ActionView::Helpers::AssetTagHelper
+  remove_const :JAVASCRIPT_DEFAULT_SOURCES
+  JAVASCRIPT_DEFAULT_SOURCES = %w(jquery.js rails.js)
+
+  reset_javascript_include_default
+end
+{% endhighlight %}
+
+And now your call to <code>javascript_include_tag :defaults</code> will include JQuery instead of Prototype.
+
+Cheers!
