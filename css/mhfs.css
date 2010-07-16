@@ -8,9 +8,6 @@ body { background: #4A4A4A url(../images/bg.png) repeat-x scroll 0 0; font-famil
   border-radius: 15px;
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
-  box-shadow: 3px 3px 2px #555;
-  -moz-box-shadow: 3px 3px 2px #555;
-  -webkit-box-shadow: 3px 3px 2px #555;
 }
 span.monospace { font-family: Monaco, 'Courier New', monospace; color: #999999; }
 .clear { clear:both; }
@@ -25,7 +22,6 @@ h1 a, h1 a:visited, h1 a:hover {
   font-size: 40px;
   color: #990000;
   text-decoration: none;
-  text-shadow: 2px 2px 2px #888;
 }
 
 /* General content title */
@@ -42,6 +38,12 @@ h2 a:hover { color: #4C4C4C; text-decoration: underline; }
 .post ul.meta li.date { background: transparent url('/images/calendar.gif') no-repeat; }
 .post ul.meta li.tags { background: transparent url('/images/tags.png') no-repeat; }
 .post ul.meta li.comments { background: transparent url('/images/comments.png') no-repeat; }
+
+/* Quote */
+.post .quote { margin-left: 40px; margin-bottom: 15px;}
+.post .quote .content { font-size: 20px; }
+.post .quote_mark { font-size: 80px; float: left; line-height: 60px; color: #4C4C4C; font-family: Helvetica, Arial, sans-serif; }
+.post .author { color: #999; font-size: 14px; margin-top: 10px;}
 
 /* Pist list */
 ul.post_list { list-style-type: none; margin-bottom: 30px;}

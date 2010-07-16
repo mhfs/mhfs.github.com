@@ -1,5 +1,3 @@
-Site
-x Add Disqus
-x Add fork me ribbon
-- Migrate domain
-- Add google analytics
+- better atom info for quotes
+- keep an eye on improvements in include and variables to get rid of ifs and assigns
+

@@ -1,0 +1,11 @@
+<li>
+  <span class="monospace">{{ post.date | date_to_string }}</span> &raquo;
+  <a href="{{ post.url }}">
+    {% case post.layout %}
+      {% when 'post' %}
+        {{ post.title }}
+      {% when 'quote' %}
+        Quote: "{{ post.content | truncatewords:6 }}" — {{post.author}}
+    {% endcase %}
+  </a>
+</li>

@@ -1,0 +1,9 @@
+<ul class="meta">
+  <li class="date">{{ post.date | date_to_long_string }}</li>
+
+  <li class="tags">
+    {% for tag in post.tags %}
+      <span>{{ tag }}</span>
+    {% endfor %}
+  </li>
+</ul>

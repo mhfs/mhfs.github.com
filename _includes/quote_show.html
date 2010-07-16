@@ -1,0 +1,20 @@
+{% unless post %}
+  {% assign post = page %}
+{% endunless %}
+
+<div class="post">
+  <div class="quote_mark">“</div>
+  <div class="quote">
+    <div class="content">
+      {{post.content}}
+    </div>
+    <div class="author">
+      <span class="dash">—</span>
+      {{post.author}}
+    </div>
+  </div>
+  <div class="clear"></div>
+
+  {% include post_meta.html %}
+
+</div>

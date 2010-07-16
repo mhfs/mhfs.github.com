@@ -6,13 +6,13 @@ title: MHFS - Marcelo Silveira
 <h3>Recent Posts</h3>
 
 <ul class="post_list">
-  {% for post in site.posts limit:5 %}
-    <li><span class="monospace">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% for post in site.posts limit:10 %}
+    {% include post_item.html %}
   {% endfor %}
 </ul>
 
 <div id="projects">
-  <h3>Projects I Contributed</h3>
+  <h3>Projects I've Contributed</h3>
 
   <ul class="projects">
     <li>
