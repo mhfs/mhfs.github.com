@@ -3,13 +3,20 @@ layout: default
 title: MHFS - Marcelo Silveira
 ---
 
-<h3>Recent Posts</h3>
+<div class="intro">
+  <p>I'm <b>Marcelo Silveira</b>, a web developer and entrepreneur living in Campinas, Brazil.</p>
+</div>
+
+<h3>Recent Activity</h3>
 
 <ul class="post_list">
-  {% for post in site.posts limit:10 %}
+  {% for post in site.posts limit:5 %}
     {% include post_item.html %}
   {% endfor %}
+  <li><a href="/blog.html">View all</a></li>
 </ul>
+
+<div class="clear"></div>
 
 <div id="projects">
   <h3>Projects I've Contributed</h3>
@@ -19,16 +26,11 @@ title: MHFS - Marcelo Silveira
       Devise<br/>
       <a href="http://github.com/plataformatec/devise/">plataformatec / devise</a>
     </li>
-<!--    <li>
-      Semantic Menu<br/>
-      <a href="http://github.com/danielharan/semantic-menu/">danielharan / semantic-menu</a>
-    </li>
--->
   </ul>
 </div>
 
 <div id="contact">
-  <h3>Contact Info</h3>
+  <h3>Talk to Me</h3>
   <ul class="contacts">
     <li><a href="mailto:mhsilveira@gmail.com">mhfsilveira@gmail.com</a></li>
     <li><a href="http://github.com/mhfs/">github.com/mhfs</a></li>
