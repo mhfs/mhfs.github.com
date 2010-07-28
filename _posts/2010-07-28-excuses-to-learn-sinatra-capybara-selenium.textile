@@ -1,0 +1,27 @@
+---
+layout: post
+title: Make up excuses to learn
+tags:
+- learning
+- productivity
+---
+
+I love to study and play with new stuff. I really enjoy this but there's something that bothers me. My studies rarely result in something useful.
+
+Some weeks ago I was watching one of "Giles Bowkett's":http://gilesbowkett.blogspot.com/ screencasts and got caught by a goal he imposed himself some years ago: create a new app every month. Although that seemed a little too much for my available time, the thought itself kept coming back to my mind.
+
+A few days later I was in trouble to sleep and started thinking about something to do with those hours. I knew I'd like to play with Sinatra and explore Selenium usage via Capybara but I decided I wouldn't do it without concrete outcomes.
+
+I ended up starting the development of a "CPF and CNPJ generator":http://cpfcnpj.heroku.com/ which, even though there are dozens out there in the internet and is not very creative, is being useful for me when testing my apps.
+
+Habit changes are tough to achieve and demand constant effort, but I'm totally into it.
+
+Study, play around stuff, but apply it to something you or someone else will use. A real world example will guide your studies and usually takes your first contact with a technology much closer to what truly working with it would feel. And pushing a new app to the wild is always fun.
+
+It's not new. A lot of people talk about it. Very few people do it.
+
+In case you're interested, you can view the "source code":http://github.com/mhfs/cpfcnpj on GitHub.
+
+More apps coming soon.
+
+Cheers!
