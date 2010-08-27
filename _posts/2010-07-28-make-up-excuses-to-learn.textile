@@ -12,7 +12,7 @@ Some weeks ago I was watching one of "Giles Bowkett's":http://gilesbowkett.blogs
 
 A few days later I was in trouble to sleep and started thinking about something to do with those hours. I knew I'd like to play with Sinatra and explore Selenium usage via Capybara but I decided I wouldn't do it without concrete outcomes.
 
-I ended up starting the development of a "CPF and CNPJ generator":http://cpfcnpj.heroku.com/ which, even though there are dozens out there in the internet and is not very creative, is being useful for me when testing my apps.
+I ended up starting the development of a "CPF and CNPJ generator":http://cpfcnpj.mhfs.com.br/ which, even though there are dozens out there in the internet and is not very creative, is being useful for me when testing my apps.
 
 Habit changes are tough to achieve and demand constant effort, but I'm totally into it.
 
