@@ -1,7 +1,7 @@
 /* General Layout*/
 h3 { color: #BEC0BF;}
-p { color: #BEC0BF; font-size: 14px; }
-p a { color: #2E87A8; }
+p { color: #BEC0BF; font-size: 15px; font-family: helvetica, arial, clean, sans-serif;}
+p a, p a:hover { color: #3AAAD3; }
 body { background-color: #4A4A4A; font-family: verdana,arial,helvetica,sans-serif }
 #container {
   width: 700px;
@@ -21,18 +21,17 @@ span.monospace { font-family: Monaco, 'Courier New', monospace; color: #999999; 
 /* Header title */
 h1 a, h1 a:visited, h1 a:hover {
   font-family: georgia;
-  font-size: 55px;
+  font-size: 65px;
   color: #24abe3;
   text-decoration: none;
 }
 
 /* General content title */
-h2 { color: #3AAAD3; font-weight: bold; font-size: 18px; border-bottom: 1px solid #CCCCCC;}
-h2 a, h2 a:visited { color: #4C4C4C; text-decoration: none;}
-h2 a:hover { color: #4C4C4C; text-decoration: underline; }
+h2 { border-bottom: 1px solid #CCCCCC; }
+h2, h2 a, h2 a:visited, h2 a:hover  { color: #24abe3; font-weight: bold; font-size: 24px; text-decoration: none;}
 
 /* Post */
-.post { margin-bottom: 25px; font-size: 13px; }
+.post { margin-bottom: 45px; font-size: 13px; }
 .post ul.meta { list-style-type: none; margin: 0; color: #AAA; }
 .post ul.meta li { display: inline; padding: 0px 22px; font-style: normal; }
 .post ul.meta li span { border-bottom: 1px dotted #BBBBBB; margin-left: 4px;}
@@ -44,7 +43,7 @@ h2 a:hover { color: #4C4C4C; text-decoration: underline; }
 h2.related { font-weight: normal; }
 
 /* Quote */
-.post .quote { margin-top: 35px; margin-left: 40px; margin-bottom: 15px; }
+.post .quote { margin-top: 35px; margin-left: 40px; margin-bottom: 25px; }
 .post .quote .content { font-size: 20px; color: #BEC0BF; }
 .post .quote_mark { font-size: 80px; float: left; line-height: 60px; color: #3AAAD3; font-family: Helvetica, Arial, sans-serif; }
 .post .author { color: #999; font-size: 14px; margin-top: 10px; }
@@ -53,7 +52,7 @@ h2.related { font-weight: normal; }
 ul.post_list { list-style-type: none; margin-bottom: 30px; }
 ul.post_list li { line-height: 24px; }
 ul.post_list li a { color: #3AAAD3; font-size: 14px; }
-ul.post_list li a:visited { color: #2E87A8; }
+ul.post_list li a:visited { color: #3AAAD3; }
 
 /* Projects */
 #projects { float: left; }
