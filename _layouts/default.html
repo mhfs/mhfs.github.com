@@ -15,25 +15,59 @@
   </head>
 
   <body>
-    <div id="container">
+    <div class="container">
 
       <div id="nav">
-        <a href="/">Home</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/about.html">About</a>
-        <a href="http://feeds.feedburner.com/mhfs"><img src="/images/feed.png" alt="Feed" /></a>
+        <ul>
+          <li>
+            <a href="/">
+              Home
+              <span>The beginning</span>
+            </a>
+          </li>
+          <li>
+            <a href="/blog.html">
+              Blog
+              <span>Thoughts and tips</span>
+            </a>
+          </li>
+          <li>
+            <a href="/archive.html">
+              Archive
+              <span>The blog index</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about.html">
+              About
+              <span>A bit of history</span>
+            </a>
+          </li>
+        </ul>
       </div>
 
       <h1><a href="/">:mhfs</a></h1>
+
+      <hr />
+
       {{ content }}
 
-      <div id="footer">
-        Marcelo Silveira &copy; 2010.
-        Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a>.
-        Get the <a href="http://github.com/mhfs/mhfs.github.com/">source code</a>.
+      <hr />
+
+      <div class="span-24 last" id="footer">
+        <a href="http://feeds.feedburner.com/mhfs"><img class="feed" src="/images/rss.png" /></a>
+        <div class="span-10">
+          Marcelo Silveira &copy; 2010.<br />
+          Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a>.<br />
+          Check the <a href="http://github.com/mhfs/mhfs.github.com/">source code</a>.
+        </div>
+        <div class="span-10">
+          <a href="mailto:mhfsilveira@gmail.com">mhfsilveira@gmail.com</a><br />
+          <a href="https://github.com/mhfs">github.com/mhfs</a><br />
+          <a href="http://twitter.com/mhfsilveira">twitter.com/mhfsilveira</a>
+        </div>
       </div>
     </div>
-    <a href="http://github.com/mhfs"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
     <script type="text/javascript">
     //<![CDATA[
     (function() {

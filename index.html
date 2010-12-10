@@ -3,41 +3,43 @@ layout: default
 title: MHFS - Marcelo Silveira
 ---
 
-<div class="intro">
-  <p>I'm <b>Marcelo Silveira</b>, a web developer and entrepreneur living in Campinas, Brazil.</p>
+<div class="intro span-24 last">
+  <img class="pic" src="/images/mhfs.jpg" />
+  <p class="span-16">
+  I'm <b>Marcelo Silveira</b>, a freelancer web developer and entrepreneur living in Campinas, Brazil. I currently work at <b><a href="http://zinfinit.com/">Zinfinit</a></b>
+  coding <b><a href="http://rubyonrails.com">Ruby on Rails</a></b> apps.
+  <br />
+  I love <b>open source</b> and try to <b>contribute</b> every once in a while. You can check some of my <b>code</b> and activity on <b><a href="https://github.com/mhfs/">github</a></b>.
+  <br />
+  Feel free to <b>contact</b> me via <b><a href="mailto:mhfsilveira@gmail.com">email</a></b> or follow me on <b><a href="http://twitter.com/mhfsilveira">twitter</a></b>.
+  </p>
 </div>
 
-<h3>Recent Activity</h3>
+<div id="homelinks">
+  <div class="span-12 code">
+    <a href="http://github.com/mhfs/"><b>Code</b> → github.com/mhfs</a>
+  </div>
+  <div class="span-12 last blog">
+    <a href="http://mhfs.com.br/blog.html">mhfs.com.br/blog.html ← <b>Blog</b></a>
+  </div>
+  <div class="span-12 email">
+    <a href="mailto:mhfsilveira@gmail.com"><b>Email</b> → mhfsilveira@gmail.com</a>
+  </div>
+  <div class="span-12 last twitter">
+    <a href="http://twitter.com/mhfsilveira">@mhfsilveira ← <b>Twitter</b></a>
+  </div>
+</div>
+
+<hr />
+
+<h3>Recent Blog Entries</h3>
 
 <ul class="post_list">
-  {% for post in site.posts limit:5 %}
+  {% for post in site.posts limit:10 %}
     {% include post_item.html %}
   {% endfor %}
-  <li><a href="/blog.html">View all</a></li>
+  <li><a class="archive" href="/archive.html">Full Archive →</a></li>
 </ul>
 
 <div class="clear"></div>
 
-<div id="projects">
-  <h3>Projects I've Contributed</h3>
-
-  <ul class="projects">
-    <li>
-      Devise<br/>
-      <a href="http://github.com/plataformatec/devise/">plataformatec / devise</a>
-    </li>
-  </ul>
-</div>
-
-<div id="contact">
-  <h3>Talk to Me</h3>
-  <ul class="contacts">
-    <li><a href="mailto:mhsilveira@gmail.com">mhfsilveira@gmail.com</a></li>
-    <li><a href="http://github.com/mhfs/">github.com/mhfs</a></li>
-    <li><a href="http://twitter.com/mhfsilveira/">@mhfsilveira</a></li>
-    <li><a href="http://workingwithrails.com/person/18393-marcelo-silveira">wwr/mhfs</a></li>
-    <li><a href="http://mhfs.com.br/">mhfs.com.br</a></li>
-  </ul>
-</div>
-
-<div class="clear"></div>

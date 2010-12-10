@@ -1,23 +1,15 @@
 ---
 layout: default
-title: MHFS - Marcelo Silveira
+title: MHFS - Marcelo Silveira - Blog
 ---
 
-{% for post in site.posts limit:10 %}
+{% for post in site.posts %}
   {% case post.layout %}
     {% when 'post' %}
       {% include post_show.html %}
     {% when 'quote' %}
       {% include quote_show.html %}
   {% endcase %}
+  <hr />
 {% endfor %}
 
-<br />
-<br />
-
-<h2>Older Posts</h2>
-<ul class="post_list">
-  {% for post in site.posts offset:3 %}
-    {% include post_item.html %}
-  {% endfor %}
-</ul>

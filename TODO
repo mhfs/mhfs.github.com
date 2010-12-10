@@ -1,5 +1,3 @@
-- better atom info for quotes
-- keep an eye on improvements in include and variables to get rid of ifs and assigns
-- make titles/quotes clickable in the blog screen (to reach comments)
 - add comments count to meta
+- add pagination to blog page
 
