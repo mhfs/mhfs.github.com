@@ -8,6 +8,6 @@ tags:
 
 p. "Weebly":http://www.weebly.com had a great initiative to finish this web curse called IE6. If you can support it somehow don't think twice.
 
-p. "www.ie6nomore.com":www.ie6nomore.com
+p. "www.ie6nomore.com":http://www.ie6nomore.com
 
 p. Cheers!
