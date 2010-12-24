@@ -2,10 +2,10 @@ require 'rubygems'
 require 'net/ssh'
 
 REMOTE_ADDRESS = 'server.mhfs.com.br'
-REMOTE_PATH    = '/home/www/mhfs.com.br'
+REMOTE_PATH    = '/home/mhfs.com.br'
 REPO_ADDRESS   = 'git://github.com/mhfs/mhfs.github.com.git'
 BRANCH         = 'master'
-DEPLOY_USER    = 'mhfs'
+DEPLOY_USER    = 'mhfs_com_br'
 
 desc "deploy to remote server"
 task :deploy do
@@ -15,8 +15,7 @@ task :deploy do
     commands << "rm -rf _site"
     commands << "git checkout -f #{BRANCH}"
     commands << "git pull origin #{BRANCH}"
-    commands << "source /usr/local/lib/rvm" # bashrc is not sourced via Net::SSH
-    commands << "jekyll"
+    commands << "jekyll #{REMOTE_PATH}/www"
     ssh.exec commands.join('; ')
   end
 end
@@ -32,11 +31,3 @@ task :clone do
   end
 end
 
-task :setup do
-  commands = []
-  Net::SSH.start( REMOTE_ADDRESS, DEPLOY_USER ) do |ssh|
-    commands << "sudo gem install --no-rdoc --no-ri jekyll RedCloth"
-    commands << "sudo easy_install Pygments"
-    ssh.exec commands.join('; ')
-  end
-end
