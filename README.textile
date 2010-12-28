@@ -1,9 +1,0 @@
-h2. Marcelo Silveira
-
-p. This is the Jekyll source for Marcelo Silveira's blog and website.
-
-p. You may feel free to re-use any part of the structure, design, and layout of this site; it is all licensed under the MIT License. If you do use them, a link back to http://mhfs.com.br/ would be appreciated, but is not required.
-
-p. However, the CONTENT of the site (blog posts and page content) is licensed under a "Creative Commons Attribution-Share Alike":http://creativecommons.org/licenses/by-sa/3.0/ license (you may use it, but must give attribution and preserve license).
-
-Copyright &copy; 2010 Marcelo Silveira. Rights reserved as indicated above.
