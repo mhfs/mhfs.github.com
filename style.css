@@ -1,0 +1,64 @@
+.clear{ clear: both; }
+
+body {
+  background: #333 url("background.png");
+  font-family: helvetica, arial, clean,sans-serif;
+}
+
+.container {
+  width: 610px;
+  margin: 30px auto;
+  border: 10px solid black;
+  background-color: white;
+  padding: 20px 50px;
+}
+
+h1 {
+  font-family: Georgia,"Times New Roman",Times,serif;
+  font-size: 45px;
+  font-weight: normal;
+  margin: 0;
+  color: #999;
+  text-decoration: none;
+  text-align: center;
+}
+
+hr{
+  background: #DDD;
+  color: #DDD;
+  clear: both;
+  float: none;
+  width: 100%;
+  height: .1em;
+  margin: 1.45em 0;
+  border: none;
+}
+
+#homelinks div{
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+#homelinks div a{
+  margin: 15px;
+  line-height: 2.5em;
+  color: #FFFFFF;
+}
+
+#homelinks .email   { background-color: #999999; }
+#homelinks .twitter { background-color: #FF833B; }
+#homelinks .site    { background-color: #FFCB0E; }
+#homelinks .code    { background-color: #52ADB1; }
+
+#homelinks .email, #homelinks .code, #homelinks .twitter, #homelinks .site{
+  float: left;
+  width: 300px;
+}
+
+#homelinks .email, #homelinks .site{
+  margin-right: 10px;
+}
+
+#homelinks .twitter, #homelinks .code{
+  text-align: right;
+}
